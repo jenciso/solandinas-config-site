@@ -1,0 +1,108 @@
+version: "2"
+ 
+services:
+
+  webhook:
+   image: eduwass/docker-git-webhook
+   container_name: webhook
+   environment:
+     GIT_HOOK_TOKEN: edrff3dd4rsv5fv
+     GIT_NAME: Soldadoras
+     GIT_EMAIL: jenciso@soldadorasandinas.com
+     GIT_REPO: git@gitlab.com:solandinas/website.git
+     BASE64_ENCODED_SSH_KEY: 'true'
+     SSH_KEY: |
+       LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb2dJQkFBS0NBUUVBeUVROHoyYmJF
+       UGlxcEpSaE1ucEhYVzN3UHFGdVVmRC8yWngxQmREV2tZdmhxTVcrClI1Y3BaUy9LeU9hRm1aSXdR
+       U1hMTFFGWVRyVmt5dGtkY3RKSXF1YjFaVEpkdGZXYXRyTHBJRmN2U1NPL3JnMjIKOWtUVlFrQTBH
+       UCtkVmMveXg1Vlc0OWhid2ZJNGpJVFRTR1g3TnRjcDlYaEFEdHNjRm1oL3FuRnRuV1JtZ0Q1RgpL
+       eEd6R2lrNGtNS1JRcnhFdDlSY3B5SFRvdnZMMFlOcEdFSVJINGoxZjdOUmx4dGoxdTcxL2FscnJS
+       d2dEVkZDCnJnaTVRcldtUG5EZXRGempqdXN3b3hOeDZEYnNmQ3JZMmd2OURiWlhjeE5JYXJSQW4r
+       SlhHeFl0cE4rMi9xRzgKdThlYVhVVVVSRGtIeFdQbkpHVTFuLzRFV3BmNjlZZ05vNjhMU1FJREFR
+       QUJBb0lCQUFrUkJjdkI5Vkw4WHdWYQpibGdScng5c3RiNndJa1YxYXEvWVpIZmg3NFRoVjFNRHVN
+       eVc3Rm5YWXcvYlY5c1BBajVBenNUMzFaNmltYkNSClNjTUVBQ1EwbHBHQlNUck9wclYwdmhjbnUw
+       MU5ZQVVxTzhsRWJuODBWdWQyMHhHcWUyeEx0NFpUS2p4S2tnTFMKbEpvbmU4c016S3AvU2k4aC9s
+       Q0paSlk3MG1HWXNJVm81RG1uY0J3Ri9samZlbnc5cFFpN1FvT3RnbjljUVd1MwpDem14S1dVZ3Vo
+       dkhhaXN2c1Y4UitjSys4RW1xeFFHdTNkd0xUczNSUXYwNWVjMEZlbitVYXArN1JYTitJY3psCkFI
+       ZW5mVTZoRFltZ21JOFlySlFrTURRMDhaVlIvZlY3L3A0ZjNjRlhSemZrTkR0eG1wNUtJV2o1ZXk4
+       THc0ck0KVndwdldzMENnWUVBNTcwZGZLdFl0NU5ZcmVPM1Bqa1ZkTlBzVVkrd0ZvK3c5U2R1MHBy
+       NDA4WndNVDg2b2VvTQprM1ZkRzN1dkpBUzc5YWVYQkJaQU1ESkI4c0ZBbTRSdURieWlTdlVWeWxO
+       NG5FMGpER0JFeUlybGdJeFF0RDkwCjNLNnVQNVZTRXVqUEE3NTJNbnR5MVZrMWhuN3IxbStMZ2hK
+       K0tyekxnemd1bFRYL3dxR1EvQWNDZ1lFQTNUdWgKQjhoODNUT2hKQUxwQ2hFbG42QThVZTlTSk9K
+       a09YWFc1cXNucXhNR1hqanJja2IvYUZoT3ZZcDFreHBEZGpOWgplWjRuWDNjZlZXWXlnT3d0V0Z5
+       YVZJb3hVbkRNc25VRnlITTVja2RzSWlyVFRTOWVldWpFbGM1Ukc2azB2ZjZ2Cml4cVZmZWE0eXF2
+       bDV1ZHErN3B2RExDN1A1bStyaGMwbk9qamlpOENnWUFyYzBvVUZneU1YeFJCaG5EVk9kN00KQ1BC
+       R1dxcXBrRWVkcjhjWHRmYnh2a05LK0pBRnk5eVB5WEdydFlVaE84SUNUV29EV2lpdTRMMTh4cjlX
+       YVg0NQpGU1ZZNkpzdFZIbEkxUzI5SkUvQlNrbTkwSkZST3BTdXpCSGYyaCtKYkIxa2xsR1RKWkpp
+       YmxlYTRERllBNUlrCjBWTFdzSTk0Q3hDdzZXOExEMEFnQVFLQmdEVnF3R2J3c2JWM1VlRXdFclNy
+       anpvTHBvVGlGQ056eGw5WlpKb3QKbVZabE1aUnVpZXI5MlkySVJQcmZBNlNSSXRqWGJUTkFUS0Z3
+       VWRCODdKVFVjZDV6L1krTURueXBYOE4zSGY1WQpVL2FUNkRnWHZ3MVQ4cXdhcDl6RUJERjVtWktH
+       ZkR4S0h1NVhWeWNZZWxwV1ppNkJ4VzU2L2J0TmxBelU3WTgxCmJEdGhBb0dBYXliaWpGajlGM3dG
+       MmJwSzMwazUrdFN3dmUvZ25zOUlhUjR5bEF1K2hOUjdsd0pvRXdJZmFVZ1UKYjJuN0FNMGdjV2x4
+       MkRPZ0tYQWdxUnByNlMyb2Z6QzRmZk02Z0VIMlcxSTZranAzdm42NnZNclE2OE9kYStuWApZT2ht
+       Rmw4ZXZCOWJhSXI5djlzWkhzd0NKTFBlaTl3Ly9OaWo2ODZPTHhLemdzdHZvdlk9Ci0tLS0tRU5E
+       IFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+   volumes:
+     - ../website:/code
+   ports:
+     - "8555:8555"
+
+  web:
+   image: nginx:latest
+   container_name: Nginx
+   ports:
+     - "80:80"
+   volumes:
+     - ../website:/public
+     - ./nginx/site.conf:/etc/nginx/conf.d/site.conf
+     - ../data/nginx/logs:/var/log/nginx/
+   links: 
+     - php
+   depends_on:
+     - php
+ 
+  php:
+   build: ./php
+   container_name: PHP7
+   volumes:
+     - ../website:/public
+   environment:
+     RDS_HOSTNAME: db
+     RDS_PORT: 3306
+     RDS_USERNAME: solroot
+     RDS_PASSWORD: $$solroot2017$$
+     RDS_DB_NAME: soldadorasDB
+   links:
+     - db
+ 
+  db:
+   image: mysql:5.6
+   container_name: MySQL
+   volumes:
+     - ../data/mysql:/var/lib/mysql
+   environment:
+     MYSQL_ROOT_PASSWORD: solroot2017
+     MYSQL_DATABASE: soldadorasDB
+     MYSQL_USER: solroot
+     MYSQL_PASSWORD: $$solroot2017$$
+   expose:
+     - 3306
+   ports:
+     - "3306:3306"
+ 
+  pma:
+   image: phpmyadmin/phpmyadmin
+   container_name: PHPMyAdmin
+   environment:
+     PMA_ARBITRARY: 1
+     PMA_HOST: db
+     PMA_USER: solroot
+     PMA_PASSWORD: $$solroot2017$$
+     PHP_UPLOAD_MAX_FILESIZE: 1G
+     PHP_MAX_INPUT_VARS: 1G
+   restart: always
+   ports:
+     - "8001:80"
+   volumes:
+     - ../data/sessions:/sessions 
+
