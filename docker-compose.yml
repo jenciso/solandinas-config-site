@@ -59,8 +59,7 @@ services:
      - ../website:/public
      - ./nginx/site.conf:/etc/nginx/conf.d/site.conf
      - ../data/nginx/logs:/var/log/nginx/
-     - ./letsencrypt/fullchain.pem:/etc/letsencrypt/fullchain.pem
-     - ./letsencrypt/privkey.pem:/etc/letsencrypt/privkey.pem
+     - /etc/letsencrypt:/etc/letsencrypt
    links: 
      - php
    depends_on:
