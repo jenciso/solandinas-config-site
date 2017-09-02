@@ -37,3 +37,11 @@ Crontab line to run each sunday
 ```
 0 0 * * 0 /data/www.soldadorasandinas.com/config-site/auto-renew-letsencrypt.sh
 ```
+
+
+### Replace google jquery ajax library
+
+```
+cd /data/www.soldadorasandinas.com/website
+find . -name '*' -type f -exec sed -i 's#http://ajax.googleapis.com/#https://ajax.googleapis.com/#' {} \;
+```
