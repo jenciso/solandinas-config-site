@@ -27,7 +27,7 @@ Monthly run the following commands
 ```
 service sslh stop
 /opt/letsencrypt/letsencrypt-auto certonly --standalone --email juan.enciso@gmail.com -d soldadorasandinas.com -d www.soldadorasandinas.com --renew-by-default
-docker exec -it Nginx nginx -s reload
+/usr/bin/docker exec -it Nginx nginx -s reload
 service sslh start
 
 ```
