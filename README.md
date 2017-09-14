@@ -6,14 +6,14 @@ Author: Juan Enciso
 
 ### LetsEncrypt create cert
 
-Before, you have to shutdown your http server
+Before, you need to shutdown the http server
 
 ```
 git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 /opt/letsencrypt/letsencrypt-auto certonly --standalone --email juan.enciso@gmail.com -d soldadorasandinas.com -d www.soldadorasandinas.com 
 ``` 
 
-The certificates path will be
+The certificates path will be here:
 
 ```
 /etc/letsencrypt/live/soldadorasandinas.com/fullchain.pem
@@ -22,14 +22,13 @@ The certificates path will be
 
 ### LetsEncrypt renew step
 
-Monthly run the following commands
+create a monthly script for execute these commands:
 
-```
+```sh
 service sslh stop
 /opt/letsencrypt/letsencrypt-auto certonly --standalone --email juan.enciso@gmail.com -d soldadorasandinas.com -d www.soldadorasandinas.com --renew-by-default
 /usr/bin/docker exec -it Nginx nginx -s reload
 service sslh start
-
 ```
 
 Crontab line to run each sunday 
